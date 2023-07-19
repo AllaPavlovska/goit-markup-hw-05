@@ -678,6 +678,11 @@ pointer-events: none;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
        box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
        padding: 24px;
+    padding-top: 72px;
+        padding-right: 24px;
+        padding-bottom: 24px;
+        padding-left: 24px;
+       
 }
 .modal-close-btn{
     border: none;
@@ -724,22 +729,26 @@ background-color: var(--button-color);
         letter-spacing: 0.02em;
         margin-bottom: 16px;
         margin-top: 24px;
+        text-align: center;
+        color: var(--navy-color);
 }
 .modal-input{
     width: 100%;
     height: 40px;
     border-radius: 4px;
-    border: 1px solid var(--navy-color, rgba(46, 47, 66, 0.40));
     padding: 0 10px 0 38px;
-    border-color: transparent;
     color: var(--navy-color);
     outline: transparent;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input-icon{
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-email{
@@ -750,7 +759,15 @@ background-color: var(--button-color);
         width: 264px;
             height: 40px;
             margin-left: 80px;
-            
+            font-style: 12px;
+            line-height: 1.5;
+            letter-spacing: 0.04em;
+            padding-left: 16px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+            color: var(--white-color);           
+}
+input[type="email"]::placeholder {
+    color: #ffffff;
 }
 .input-email:focus{
   outline: transparent;
@@ -774,6 +791,13 @@ fill: var(--main-color);
         color: var(--navy-color);
         outline: transparent;
         resize: none;
+        font-size: 12px;
+        line-height: 1.17;
+          letter-spacing: 0.04em;
+            color: rgba(46, 47, 66, 0.4);
+           border: 1px solid rgba(46, 47, 66, 0.4);
+        background-color: transparent;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-textarea:focus{
@@ -800,23 +824,28 @@ border-radius: 4px;
         font-weight: 500;
         line-height: 1.5;
         letter-spacing: 0.04em;
-        margin-bottom: 24px;
-        margin-left: 90px;
-        margin-right: 120px;
-        margin-top: 24px;
+        margin: 0 auto;
+        display: block;
+        min-width: 169px;
+        cursor: pointer;
+border: none;
+background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
       
 }
 .modal-field{
-    margin-bottom: 8px;
+   
     position: relative;
+    margin-bottom: 16px
 }
 .input-label{
     color: var(--light-slate, #8E8F99);
         font-size: 12px;
         font-weight: 400;
-        line-height: 1.16;
+        line-height: 1.17;
         letter-spacing: 0.04em;
         margin-bottom: 4px;
+display: block;
 }
 .social-media-item{
     font-size: 16px;
@@ -895,6 +924,10 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
 fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
 border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 background-color: var(--button-color);
+display: inline-flex;
+     align-items: center;
+  justify-content: center;
+ fill: transparent;
 
 
 }
@@ -912,12 +945,14 @@ background-color: var(--button-color);
     color: var(--main-color);
 }
   .confirm-input:checked + .confirm-check-label .check-field {
-    background-color: var(--navy-color);
-   fill: var(--button-color);
+    background-color: var(--button-color);
+   fill: var(--cloud-color);
     border: none;
+   
   }
 .footer-icon{
     fill: var(--white-color);
+    margin-left: 16px;
 }
 .footer-subscribe{
     flex-grow: 1;
@@ -928,14 +963,23 @@ background-color: var(--button-color);
     border-radius: 4px;
         background: var(--main-color);
         color: var(--white-color);
-        margin-left: 2
+        margin-left: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 165px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        cursor: pointer;
+        border: none;
 }
 .subscribe-item{
     padding: 8px 24px;
 }
 .footer-block-name{
 color: var(--white-color, #FFF);
-   
+    margin-bottom: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -943,4 +987,11 @@ color: var(--white-color, #FFF);
     height: 40px;
     margin-left: 80px;
    
+}
+.subscribe-form{
+    display: flex;
+    gap: 24px;
+}
+.confirm-container{
+    margin-bottom: 24px;
 }
