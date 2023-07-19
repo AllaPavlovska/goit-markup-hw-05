@@ -741,16 +741,7 @@ background-color: var(--button-color);
     top: 50%;
     transform: translateY(-50%);
 }
-.input-label-footer{
-    color: var(--white-color, #FFF);
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        width: 264px;
-            height: 40px;    
-            margin-bottom: 24px;      
-}
+
 .input-email{
     border-radius: 4px;
         border: 1px solid var(--white, #FFF);
@@ -941,4 +932,14 @@ fill: transparent;
 }
 .subscribe-item{
     padding: 8px 24px;
+}
+.footer-block-name{
+color: var(--white-color, #FFF);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    width: 264px;
+    height: 40px;
+    margin-bottom: 24px;
 }
